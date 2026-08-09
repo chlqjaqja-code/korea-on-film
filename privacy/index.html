@@ -44,6 +44,7 @@
 <p class="meta">운영자 &middot; Korea on Film (@korea_on_film)</p>
 <p class="meta">문의 &middot; <a href="mailto:korea.film.cbh@gmail.com">korea.film.cbh@gmail.com</a></p>
 <p class="meta">시행일 &middot; 2026년 8월 1일</p>
+<p class="meta">개정일 &middot; 2026년 8월 9일 (YouTube API 서비스 항목 추가)</p>
 
 <h2>1. 서비스 개요</h2>
 <p>본 서비스는 운영자 본인이 촬영한 사진 및 영상을, <strong>운영자 본인이 소유한 소셜 미디어
@@ -84,20 +85,44 @@
 </ul>
 <p>각 플랫폼에 전달된 정보는 해당 플랫폼의 개인정보처리방침을 따릅니다.</p>
 
-<h2>5. 보관 및 파기</h2>
+<h2>5. YouTube API 서비스</h2>
+<p>본 서비스는 운영자 본인의 YouTube 채널에 영상을 업로드하기 위해
+<strong>YouTube API Services</strong>를 사용합니다. 본 서비스를 이용함으로써 이용자는
+<a href="https://www.youtube.com/t/terms">YouTube 서비스 약관</a>에 동의하게 되며,
+Google 의 정보 처리에 관하여는 <a href="https://policies.google.com/privacy">Google
+개인정보처리방침</a>이 적용됩니다.</p>
+<ul>
+  <li><strong>요청하는 권한</strong> &mdash; <code>youtube.upload</code> 하나뿐이며,
+    호출하는 API 는 <code>videos.insert</code> 하나뿐입니다. 조회·검색·수정·삭제 관련
+    API 는 사용하지 않습니다.</li>
+  <li><strong>접근 대상</strong> &mdash; 운영자 본인 소유 채널 한 개
+    (<code>UCDjKuBSpt1sZl61Xhpo4Ciw</code>). 다른 채널의 데이터는 읽지도 쓰지도 않습니다.</li>
+  <li><strong>저장하는 것</strong> &mdash; 운영자 본인 계정의 OAuth 토큰만 운영자 PC 에
+    저장합니다. YouTube 이용자 데이터(시청 기록, 구독, 댓글, 다른 이용자의 콘텐츠)는
+    수집·저장·처리하지 않으며, 어떤 서버로도 전송하지 않습니다.</li>
+  <li><strong>권한 철회</strong> &mdash;
+    <a href="https://myaccount.google.com/permissions">Google 계정 권한 설정</a>에서
+    언제든지 본 서비스의 접근 권한을 해제할 수 있습니다.</li>
+  <li><strong>삭제</strong> &mdash; 권한을 해제하거나 운영자 PC 의 토큰 파일
+    (<code>youtube_token.json</code>)을 지우면 저장된 YouTube 관련 데이터는 남지
+    않습니다. 토큰 외에 저장하는 YouTube 데이터가 없으므로 별도의 파기 절차가
+    필요하지 않습니다.</li>
+</ul>
+
+<h2>6. 보관 및 파기</h2>
 <ul>
   <li>모든 데이터는 운영자 개인 PC에만 저장되며 외부 서버로 전송되지 않습니다.</li>
   <li>게시 기록은 12개월 보관 후 삭제합니다.</li>
   <li>API 액세스 토큰은 연동 해제 시 즉시 삭제됩니다.</li>
 </ul>
 
-<h2>6. 이용자의 권리</h2>
+<h2>7. 이용자의 권리</h2>
 <p>본 서비스는 운영자 본인 외 이용자가 없으므로 별도의 열람·정정·삭제 요청 절차를 두지
 않습니다. 다만 본 서비스가 게시한 콘텐츠에 관하여 문의나 삭제 요청이 있는 경우
 <a href="mailto:korea.film.cbh@gmail.com">korea.film.cbh@gmail.com</a> 로 연락 주시면
 확인 후 조치합니다.</p>
 
-<h2>7. 보안 조치</h2>
+<h2>8. 보안 조치</h2>
 <ul>
   <li>API 토큰은 운영자 PC의 접근 제한된 위치에 저장됩니다.</li>
   <li>촬영 원본에 포함된 <strong>카메라 시리얼번호 등 식별 가능한 정보는 게시물에
@@ -105,7 +130,7 @@
     셔터스피드, ISO로 한정됩니다.</li>
 </ul>
 
-<h2>8. 변경 고지</h2>
+<h2>9. 변경 고지</h2>
 <p>본 방침이 변경되는 경우 본 페이지에 개정 내용과 시행일을 게시합니다.</p>
 
 
@@ -115,6 +140,7 @@
 <p class="meta">Operator &middot; Korea on Film (@korea_on_film)</p>
 <p class="meta">Contact &middot; <a href="mailto:korea.film.cbh@gmail.com">korea.film.cbh@gmail.com</a></p>
 <p class="meta">Effective &middot; August 1, 2026</p>
+<p class="meta">Revised &middot; August 9, 2026 (YouTube API Services section added)</p>
 
 <h2>1. Overview</h2>
 <p>This service is a personal tool that publishes photos and videos taken by the
@@ -158,7 +184,33 @@ publish content via their official APIs:</p>
 <p>Information transmitted to these platforms is governed by their respective privacy
 policies.</p>
 
-<h2>5. Retention and Deletion</h2>
+<h2>5. YouTube API Services</h2>
+<p>This service uses <strong>YouTube API Services</strong> to upload videos to the
+operator's own YouTube channel. By using this service you agree to be bound by the
+<a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's
+handling of information is governed by the
+<a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<ul>
+  <li><strong>Scope requested</strong> &mdash; <code>youtube.upload</code> only. The
+    only endpoint called is <code>videos.insert</code>. No read, search, update, or
+    delete endpoints are used.</li>
+  <li><strong>What it accesses</strong> &mdash; one channel owned by the operator
+    (<code>UCDjKuBSpt1sZl61Xhpo4Ciw</code>). It neither reads nor writes data belonging
+    to any other channel.</li>
+  <li><strong>What is stored</strong> &mdash; only the operator's own OAuth token, kept
+    on the operator's PC. No YouTube user data (watch history, subscriptions, comments,
+    or other users' content) is collected, stored, or processed, and nothing is sent to
+    any server.</li>
+  <li><strong>Revoking access</strong> &mdash; access granted to this service can be
+    revoked at any time at
+    <a href="https://myaccount.google.com/permissions">Google account permissions</a>.</li>
+  <li><strong>Deletion</strong> &mdash; revoking access, or deleting the token file
+    (<code>youtube_token.json</code>) on the operator's PC, leaves no stored YouTube
+    data. As no YouTube data other than the token is retained, no separate deletion
+    procedure is required.</li>
+</ul>
+
+<h2>6. Retention and Deletion</h2>
 <ul>
   <li>All data is stored only on the operator's personal computer and is not
     transmitted to any external server.</li>
@@ -166,13 +218,13 @@ policies.</p>
   <li>API access tokens are deleted immediately upon disconnection.</li>
 </ul>
 
-<h2>6. User Rights</h2>
+<h2>7. User Rights</h2>
 <p>As this service has no users other than the operator, no separate access,
 correction, or deletion request process is provided. For inquiries or removal requests
 regarding content published by this service, please contact
 <a href="mailto:korea.film.cbh@gmail.com">korea.film.cbh@gmail.com</a>.</p>
 
-<h2>7. Security</h2>
+<h2>8. Security</h2>
 <ul>
   <li>API tokens are stored in an access-restricted location on the operator's PC.</li>
   <li><strong>Identifying information contained in source files, such as camera serial
@@ -180,7 +232,7 @@ regarding content published by this service, please contact
     aperture, shutter speed, and ISO are used.</li>
 </ul>
 
-<h2>8. Changes</h2>
+<h2>9. Changes</h2>
 <p>Any changes to this policy will be posted on this page with the revised effective
 date.</p>
 </div>
